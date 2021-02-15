@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021-02-15</title>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+        
+        h1 {
+            color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>2021-02-15</h1>
+    <form action="#" method="post">
+        <p>작성자
+            <input type="text" name="uxerName" placeholder="작성자" autofocus="autofocus" />
+        </p>
+        <p>비밀번호<span style="color:red;">*</span>
+            <input type="password" name="userPWD" required="required" />
+        </p>
+        <p>Email
+            <input type="email" name="userEmail" autocomplete="on" />
+        </p>
+        <p>연락처
+            <input type="tel" name="userPhone" autocomplete="off" />
+        </p>
+        <p>투숙날짜
+            <input type="datetime-local" name="userDateTime" />
+        </p>
+        <p>
+            년,월<input type="month" name="userMonth" /> 주간
+            <input type="week" name="userWeek" /> 시,분
+            <input type="time" name="userTime" />
+        </p>
+        <p>Color
+            <input type="color" name="uerColor" />
+        </p>
+        <p>투숙인원
+            <input type="number" name="userNumber" value="1" />
+        </p>
+        <p>제목
+            <input type="text" name="userTitle" />
+        </p>
+        <p>검색
+            <input type="search" name="userSearch" />
+        </p>
+        <p>URL
+            <input type="url" name="userUrl" />
+        </p>
+        <p>범위
+            <input type="range" name="userRange" min="10" max="100" step="10" />
+        </p>
+        <p>파일을 올려주세요
+            <input type="file" name="userFile" />
+        </p>
+        <p>선택한책:
+            <input type="text" value="반응형웹" readonly="readonly" />
+            <input type="number" value="1" />
+        </p>
+        <p>
+            <input type="submit" />
+            <input type="reset" disabled="disabled" />
+        </p>
+    </form>
+    <details>
+        <summary>Form요소</summary>
+        <ul>
+            <li>autofocus : 자동커서</li>
+            <li>placeholer : 작성시 없어지는 글</li>
+            <li><span style="color:red;">*</span> : 필수 표시</li>
+            <li>autocomplete : 전에 입력한 글을 자동으로 밑에 표시 on/off </li>
+            <li>datetime-local : 연도, 월, 일, 시간 창</li>
+            <li>month : 월, week : 주, time : 시간</li>
+            <li>color : 컬러픽커</li>
+            <li>range : 범위 바 / min : 최소, max : 최고, step : 범위스텝</li>
+            <li>file : 파일선택</li>
+            <li>readonly : 바뀌지 않는 글</li>
+            <li>disabled : 비활성화</li>
+        </ul>
+    </details>
+    <br>
+    <hr>
+    <br>
+    <div style="background:red;">div1</div>
+    <div style="background:yellow;">div2</div>
+    <div style="background:green;">div3</div>
+    <span style="background:#bfffdf;">span1</span>
+    <span style="background:#ffe599;">span2</span>
+    <span style="background:#ffbfff;">span3</span>
+    <details>
+        <summary>CSS기초(영역표시)</summary>
+        <ul>
+            <li>div : division의 약자로 영역을 짓거나 그룹을 지을 때 씀.</li>
+            <li>span : 작은 div</li>
+        </ul>
+    </details>
+
+</body>
+
+</html>

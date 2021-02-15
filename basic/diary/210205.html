@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>2021-02-05</title>
+	<link rel="stylesheet" href=""/>
+</head>
+<body>
+	<h1>2021-02-05</h1>
+	<details>
+		<summary>하이퍼링크 요소</summary>
+		<h2>a요소 하이퍼링크 텍스트</h2>
+		<ul>
+			<li><a href="http://greenraining.dothome.co.kr" target="_blank">BEAR HOUSE</a> &gt;링크</li>
+			<li><a href="gallery_car.html" target="_blank">자동차 박람회 갤러리</a> &gt;이미지</li>
+			<li><a href="mailto:greenraining_@naver.com">운영자에게 메일 보내기</a> &gt;메일(mailto:메일)</li>
+			<li><a href="tel:010-3333-3456">전화걸기</a> &gt;전화(tel:전화번호)</li>
+			<li><a href="sms:010-3333-3456">문자보내기</a> &gt;문자(sms:전화번호)</li>
+		</ul>
+		<h2>a요소 하이퍼링크 이미지</h2>
+		<ul>
+			<li>위 하이퍼링크 텍스트랑 같으나 블랭크 뒤에 이미지 요소 추가(width,height 이미지사이즈)</li>
+		</ul>
+	</details>
+	<details>
+		<summary>네임앵커</summary>
+		<h2>네임 앵커: 한페이지 안에서 링크 연결하기</h2>
+		<ul>
+			<li>문서내에서 문서로 이동할때 주로 사용함</li>
+			<li>예를 들면, 목차 부분을 클릭하면 목차 내용이 있는 위치로 바로 이동하는 것!</li>
+			<li>또는 화면 오른쪽에 "top"버튼을 누르면 그 페이지의 위로 이동 하는 것 요소와 id를 이용한다.</li>
+			<li>클릭하는 친구에 a링크를 쓰고 링크되어 넘어갈 곳에 id를 쓴다.</li>
+			<li>​*여기서 중요! id는 중복되서 사용될 수 없다. 고유명사여야 한다.영어로 만들어야 한다.</li>
+			<li>* id를 부를때는 #을 사용한다</li>
+			<li>
+				tabindex : 키보드 접근성 속성, 번호가 클수록 우선순위가 낮음. <br/>
+				0은 포커스 안되는 요소를 되게함.  <br/>
+				-1은 포커스 해제. <br/>
+				그 이외의 양수는 값이 작을수록 우선순위
+			</li>
+			<li><a href="https://blog.naver.com/skylook0613/222156525551" target="_blank">참고자료</a></li>
+			<li><a href="#Boris">보리스</a></li>
+			<li><a href="#Rupee" tabindex="1">루피</a></li>
+		</ul>
+		<h2 id="Boris">보리스</h2>
+		<img src="image/hh.jpg" alt="보리스"/>
+		<h2 id="Rupee">루피</h2>
+		<img src="image/gg.jpg" alt="루피"/>
+		<p><a href="#">위로 이동하기</a> - a요소안 #</p>
+	</details>
+	<details>
+		<summary>이미지맵을 이용한 하이퍼링크 연결</summary>
+		<div>
+			<img src="image/banner_map.gif" width="200" height="200" alt="배너" usemap="#bannerImg"/>
+		</div>
+		<map name="bannerImg">
+			<area shape="rect" coords="0,0,100,100" href="http://greenraining.dothome.co.kr" alt=""/>
+			<area shape="rect" coords="100,0,200,100" href="http://naver.com" alt=""/>
+			<area shape="rect" coords="0,100,100,200" href="https://www.youtube.com/" alt=""/>
+			<area shape="rect" coords="100,100,200,200" 
+			href="http://greenraining.dothome.co.kr/basic/diary/210129.html" alt=""/>
+		</map>
+		<p>
+		<strong>div태그 > img 태그(src,width,height,alt,usemap="#bannerImg") <br/> 
+		/ map태그(name="bannerImg") > area태그(shape,coords,href,alt)</strong>
+		</p>
+	</details>
+</body>
+</html>

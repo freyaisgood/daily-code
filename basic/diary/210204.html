@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>2012-02-04</title>
+</head>
+<body>
+	<h1>2012-02-04</h1>
+	<details>
+		<summary>audio 요소를 이용한 사운드 삽입하기</summary>
+			<audio controls loop="1">
+				<source src="../../ex03/media/Just Dance - Patrick Patrikios.mp3"/>
+			</audio>
+			<ul>	
+				<li>
+					audio controls loop="" <br/>
+					source src="파일경로"
+				</li>
+			</ul>
+	</details>
+	<details>
+		<summary>video 요소를 이용한 동영상 무비 삽입하기</summary>		
+			<ul>
+				<li>
+				video width="너비" height="높이" controls autoplay muted poster="이미지경로" <br/>
+				source src="비디오영상경로" <br/>
+				track src="자막파일경로" kind="자막의종류" srclang="언어(서브타이틀 속성을 가졌을때만 쓸 수 있음)" label="제목"
+				</li>
+			</ul>
+	</details>
+	<details>
+		<summary>VTT 자막파일 예</summary>
+			<p>WEBVTT FILE</p>
+			<p>
+			1 <br/>
+			00:00:00.000 --> 00:00:02.000 <br/>
+			망고 안녕~ <br/>
+			<br/>
+			2 <br/>
+			00:00:02.000 --> 00:00:04.000 <br/>
+			망고 친구들~ <br/>
+			<br/>		
+			3 <br/>
+			00:00:05.000 --> 00:00:08.000 <br/>
+			빠잇! <br/>
+			<br/>		
+			4 <br/>
+			00:00:09.000 --> 00:01:08.000 <br/>
+			왈왈왈
+			</p>
+	</details>
+	<video width="620" height="540" controls autoplay muted poster="../../ex03/images/mango.jpg">
+		<source src="../../ex03/media/mango.mp4">
+		<track src="../../ex03/media/subtitle_en.vtt" kind="subtitles" srclang="en" label="english">
+		<track src="../../ex03/media/subtitle_ko.vtt" kind="subtitles" srclang="ko" label="한국어">
+		<!--[if lte IE 8]>                     
+			<p>이 브라우저는 동영상 재생을 지원하지 않습니다.</p>
+			<p><a href="http://greenraining.dothome.co.kr">베어하우스</a></p>		<img src="images/mango.jpg" width="300" alt="망고"/>
+		<![endif]-->
+	</video>
+</body>
+</html>

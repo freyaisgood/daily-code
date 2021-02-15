@@ -56,3 +56,20 @@ typings/
 
 # dotenv environment variables file
 .env
+
+
+*.zip
+*.psd
+*.ppt
+*.pptx
+*.url
+*.mp3
+*.mp4
+*.vtt
+*.bmp
+*.ogg
+*.webm
+*.exe
+*.txt
+*.eot
+*.woff

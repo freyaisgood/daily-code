@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021-02-18</title>
+    <style>
+        #div {
+            border: 3px solid cadetblue;
+            width: 50%;
+            margin-left: 20px;
+            padding-left: 20px;
+            margin: auto;
+            background-color: rgb(240, 223, 248);
+        }
+        
+        h1 {
+            background-color: rgb(75, 238, 184);
+            width: 300px;
+            color: cornsilk;
+            padding: 10px;
+            margin: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        
+        h2 {
+            background-color: rgb(250, 140, 213);
+            width: 300px;
+            color: cornsilk;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>2021-02-18</h1>
+    <div id="div">
+        <h2>CSS 적용하기</h2>
+        <p>
+            text-decoration:none; : 밑줄이 없어짐 <br> a:hover{컬러;} : 마우스 커서를 대면 컬러바뀜 <br> margin:auto; : 텍스트가 아닌 요소들을 중앙정렬 <br> list-style:none; : li 태그 앞에 있는 기호 없어짐
+        </p>
+        <h2>class와 id </h2>
+        <ol>
+            <li>clss와 id의 이름은 자유롭게 할 수 있지만, 띄어쓰기가 들어가면 안되고, 꼭 하나의 완전한 단어이어야함.</li>
+            <li>복합단어 일 경우 _,-,대문자로 표기.</li>
+            <li>&nbsp;&nbsp; ex) freya_is_good(스네이크케이스), freya-is-good(케밥케이스), FreyaIsGood(카멜케이스) </li>
+            <li>네이밍시 영어로 시작해야 하며 숫자, 일부특수기호(_,-,$)혼용 가능.</li>
+            <li>id는 한문서에 한번만 사용</li>
+            <li>class는 한문서에 다중사용</li>
+            <li>style에서 class는 . 으로 시작, id는 # 으로 시작</li>
+        </ol>
+        <h2>속성 선택자 사용하기</h2>
+        <h3>a 요소를 이용하여 선택자 정의</h3>
+        <ol>
+            <li> a[선택자]{css요소} 를 하게 되면 원하는 a요소 안 선택자에게만 css 적용가능 </li>
+            <li>a[선택자="선택자안의 원하는 텍스트"] : 일치하는 텍스트에게만 css 적용가능 </li>
+            <li>a[선택자^="선택자안의 원하는 텍스트"] : 그 텍스트로 시작하는 텍스트에게만 css 적용가능 </li>
+            <li>a[선택자$="선택자안의 원하는 텍스트"] : 그 텍스트로 끝나는 텍스트에게만 css 적용가능</li>
+            <li>a[선택자*="선택자안의 원하는 텍스트"] : 그 텍스트가 포함되는 텍스트에게만 css 적용가능</li>
+        </ol>
+        <h2>자식 선택자 사용하기</h2>
+        <h3>ex) h2요소 안에 삽입된 span 요소 이용 선택자 정의</h3>
+        <p>h2>span{원하는 css style 적용}</p>
+        <h3>ex) dd요소 안에 삽입된 span 요소 이용 선택자 정의</h3>
+        <p>dd>span{원하는 css style 적용}</p>
+    </div>
+    <br>
+    <br>
+    <h4 style="background-color: rgb(74, 230, 144); width:10%; margin: 0 auto; text-align: center;"><a href="#">위로 이동하기</a></h4>
+    <br>
+    <br>
+
+
+</body>
+
+</html>

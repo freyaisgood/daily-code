@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021-02-19</title>
+    <style>
+        h2 {
+            background-color: rgb(205, 241, 136);
+            width: 180px;
+            color: rgb(44, 42, 42);
+        }
+        
+        h3 {
+            background-color: rgb(255, 188, 166);
+            width: 380px;
+        }
+        
+        body {
+            margin-left: 30px;
+            background-color: rgb(230, 253, 249);
+        }
+        
+        p {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>2021-02-19</h1>
+    <h2>선택자 사용하기</h2>
+    <h3>인접 형제 선택자 사용하기</h3>
+    <p>ex)li 요소와 인접해있는 다른 형제 li 요소를 이용하여 선택자를 정의</p>
+    <p>li+li{css}을 넣어주면 첫번째에 있는 li 제외 나머지에 스타일이 입혀짐.</p>
+    <h3>링크 관련 가상 클래스 선택자</h3>
+    <p>a 요소의 상태에 따른 선택자를 정의</p>
+    <ol>
+        <li>a:link{css} : 방문 전의 링크 선택 </li>
+        <li>a:visited{css} : 방문 후의 링크 선택</li>
+        <li>a:hover{css} : 마우스를 올렸을 때</li>
+        <li>a:achive{css} : 클릭 할 때</li>
+    </ol>
+    <h3>동적 가상 클래스 선택자</h3>
+    <ol>
+        <li>input:hover{css} : input 요소의 상태에 따른 선택자를 정의(마우스 커서 가져다 대면 바뀜)</li>
+        <li>input:focus{css} : 양식의 입력칸 등에 클릭이나 탭하는 상태(탭키로 이동할때 바뀜)</li>
+    </ol>
+    <h3>첫 번째, 짝수 번째, 세 번째 li 요소 꾸미기</h3>
+    <p>li:first-child{css} 혹은 nth-child{css} : li요소 첫번째만</p>
+    <p>li:nth-child(even){css} : 짝수번째 li요소만</p>
+    <p>li:nth-child(odd){css} : 홀수번째 li요소만</p>
+    <p>li:nth-child(n){css} : n번째 li 요소만</p>
+    <h3>순서와 관련있는 가상 선택자</h3>
+    <p>p:first-letter{css} : p태그 첫번째 글자만</p>
+    <p>p:first-line{css} : p태그 첫번째 줄만</p>
+    <h3>내용 추가와 관련있는 가상 클래스 선택자</h3>
+    <p>h2:before{css} : 선택자 앞에 내용을 추가</p>
+    <p>h2:after{css} : 선택자 뒤에 내용을 추가</p>
+    <h3>전체 선택자</h3>
+    <p>*{css} : html 전체 요소의 CSS 속성을 정의</p>
+    <h3>그룹 선택자</h3>
+    <p>h1,h2,h3,h4{css} : 여러 선택자에 같은 CSS 속성을 정의</p>
+    <h3>소속을 정하는 트리 구조의 하위 자손 선택자</h3>
+    <p>#helthBox2 h2{css} : #helthBox2 하위에 있는 h2 태그 속성을 저의</p>
+
+
+</body>
+
+</html>

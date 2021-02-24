@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021-02-23</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>2021-02-23</h1>
+    <h2>글자와 관련된 속성</h2>
+    <div>
+        font-family - 글씨체 <br> em단위 - 상대단위 <br> font-variant:small-caps; - 소문자를 대문자로 <br> font 순서 - style variant weight size line-height family <br> ex)font:italic small-caps 30px "Times New Roman";
+    </div>
+    <h2>문단에 관련된 속성</h2>
+    <div>
+        word-spacing - 단어사이의 간격 <br> letter-spacing - 글자간의 간격(자간) <br> line-height - 텍스트 줄 사이의 거리 <br> text-transform:uppercase or lowercase - 대문자로 or 소문자 <br> text-indent - 들여쓰기 <br> text-decoration:overline - 글자 위 라인 <br> text-decoration:underline -
+        글자 아래 라인
+    </div>
+    <h2>글 문단의 흐름 방향, 공백 처리에 관련된 속성</h2>
+    <div>
+        direction:rtl - 문단의 흐름방향 [rtl(right to left):오른쪽, ltr:왼쪽] <br> white-space:nowrap - 줄바꿈이 되지 않음 <br> white-space:pre - 공백을 사용자가 입력한 만큼 표시. <br> 줄바꿈X (사용자가 Enter로 직접 줄바꿈 한것 만 적용) <br> <a href="https://blog.naver.com/groovehyunji/221098877327">- pre태그 참고자료 -</a>
+    </div>
+    <h2>목록 문단에 이미지, 위치, 스타일 제어하기</h2>
+    <div>
+        <strong>ex)</strong> <br> id 안에 <br> list-style-image:url(이미지위치) <br> list-style-position:inside or outside <br> list-style-type:upper-글씨체 (lower-글씨체 소문자)
+    </div>
+    <h2>인용부호, 특정 문자열과 같은 콘텐츠 생성하기</h2>
+    <div>
+        <strong>margin 적용 순서</strong> <br> margin-top margin-right margin-bottom margin-left <br> <strong>ex)</strong> <br> h1:before{ content:open-quote; } <br> h1:after{ content:close-quote; } <br> <strong>위 처럼 적용하면 h1글자 앞(before), 뒤(after) "(open-quote)"(close-quote)적용됨</strong>        <br> counter-increment(ex)07/unit02_02.html)참고 : <a href="https://aboooks.tistory.com/261">- counter-increment 태그 참고자료 -</a>
+    </div>
+    <h2>요소의 크기 지정 및 여백 처리하기</h2>
+    <div>
+        <strong>- padding 요소 순서 - </strong> <br> 1.padding-top: <br> 2.padding-right: <br> 3.padding-bottom: <br> 4.padding-left: <br>
+        <br> padding:1px -> 1/2/3/4 <br> padding:1px 1px -> 1,3/2,4 <br> padding:1px 1px 1px -> 1/2,4/3 <br>
+    </div>
+
+    <br>
+    <br>
+    <h4 style="background-color: rgb(74, 230, 144); width:10%; margin: 0 auto; text-align: center;"><a href="#">위로 이동하기</a></h4>
+    <br>
+    <br>
+
+</body>
+
+</html>

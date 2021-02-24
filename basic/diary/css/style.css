@@ -1,0 +1,27 @@
+body {
+    background: rgb(241, 239, 216);
+}
+
+h1 {
+    border: 2px solid rgb(245, 113, 146);
+    color: rgb(55, 83, 245);
+    width: 400px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+h2 {
+    background-color: rgb(208, 238, 161);
+    color: rgb(241, 147, 113);
+    width: 550px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+div {
+    border: 2px dotted rgb(105, 55, 224);
+    width: 500px;
+    margin: 0 auto;
+    color: rgb(8, 8, 83);
+    padding: 10px;
+}

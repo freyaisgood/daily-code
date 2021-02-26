@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(248, 227, 233);
+}
+
+h1 {
+    color: rgb(245, 27, 99);
+    font-size: 50px;
+    text-align: center;
+}
+
+summary {
+    color: rgb(2, 59, 59);
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+ul {
+    font-size: 25px;
+    text-align: center;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(248, 37, 118);
+}
+
+a:link {
+    color: cornflowerblue;
+}
+
+a:visited {
+    color: rgb(248, 37, 118);
+}

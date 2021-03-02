@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021-03-02</title>
+    <style>
+        body {
+            background: rgb(241, 233, 221);
+        }
+        
+        #column {
+            width: 1100px;
+            text-align: justify;
+            margin-bottom: 200px;
+            column-count: 2;
+            column-rule: 1px dashed #666;
+            column-gap: 50px;
+            margin: 160px auto 200px auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin: 30px auto;
+            border: 10px solid rgb(107, 209, 137);
+            width: 500px;
+            border-radius: 30px;
+            padding: 20px;
+            color: rgb(58, 68, 211)
+        }
+        
+        h2 {
+            color: rgb(206, 43, 65)
+        }
+        
+        p {
+            background-color: rgb(218, 248, 198);
+            color: rgb(11, 3, 44);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>2021-03-02</h1>
+    <div id="column">
+        <div>
+            <h2>고정좌표</h2>
+            <p>
+                &gt; position:fixed; <br> &gt; relative - 상대좌표 / absolute - 절대표 / fixed - 고정좌표
+            </p>
+        </div>
+        <div>
+            <h2>이미지 요소 세로,가로 배치/인라인과 블록</h2>
+            <p>
+                &gt; display 를 block 지정(display:block;) 후 margin, padding 이용하여 배치 <br> &gt; display 를 inline 지정(display:inline;) &gt; 인라인: 크기 X, 상하마진 X ,패딩 O <br> &gt; 블록: 크기 O, 상하마진 O ,패딩 O <br> &gt; 문법: 인라인>블록X, 인라인>인라인 O, 블록>인라인O, 블록>블록X
+            </p>
+        </div>
+        <div>
+            <h2>제목 텍스트 대신 이미지로 대체</h2>
+            <p>h1에 background:url(이미지경로) no-repeat; <br> -> + h1 span { display:none;} 작성하면 h1 글자는 웹페이지에 보이지않고 이미지만 보임(html파일에서는 보임)</p>
+        </div>
+        <div>
+            <h2>목록 문단, 정의 문단을 테이블 형식으로 배치</h2>
+            <p>
+                &gt; display:table;로 두고 그 안에 있는 dd태그나 li태그에 display:table-cell; 넣어줌 <br> &gt; border-spacing:3px; - 박스4개에 3px 간격 &gt; border-collapse:collapse; - 두줄 -> 한줄
+            </p>
+        </div>
+        <div>
+            <h2>다단에 구분선 표시</h2>
+            <p>
+                column-count:3; - 다단 수 <br> column-rule:1px dashed #666; - 다단 사이 선 디자인 <br> column-gap:40px; - 다단 사이 간격
+            </p>
+        </div>
+        <div>
+            <h2>transform 속성으로 요소 변경</h2>
+            <p>
+                transform:rotate(25deg); - 각도 <br> transform-origin:20% 40%; - 중심점
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

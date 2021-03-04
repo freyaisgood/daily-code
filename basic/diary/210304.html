@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021-03-04</title>
+    <style>
+        body {
+            font: 0.95em Arial, sans-serif;
+            margin: 50px 0px;
+            background: rgb(245, 227, 242);
+        }
+        
+        nav {
+            width: 500px;
+            margin: 0px auto;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 4em;
+            color: #229154;
+            text-shadow: 5px 5px 10px rgb(211, 247, 80);
+        }
+        
+        h2 {
+            text-shadow: 0px 0px 5px #666;
+            text-align: center;
+            font-size: 3em;
+            letter-spacing: 5px;
+            color: #d81b21;
+            text-transform: uppercase;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        img {
+            border: none;
+        }
+        
+        ul,
+        li {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #gallery {
+            list-style: none;
+        }
+        
+        #gallery li {
+            float: left;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border: 2px solid #000;
+            margin-left: 5px;
+        }
+        
+        #gallery li a img {
+            width: 100px;
+            height: 100px;
+            display: block;
+            opacity: 0.3;
+            cursor: pointer;
+        }
+        
+        #gallery li a:hover img {
+            opacity: 1;
+        }
+        
+        .color {
+            display: block;
+            width: 90px;
+            background: #666;
+            text-align: center;
+            padding: 5px;
+            position: relative;
+            top: -110px;
+            left: 0;
+            opacity: 0.5;
+            height: 0px;
+            z-index: 2;
+            visibility: hidden;
+            transition: height 0.7s ease;
+        }
+        
+        .color strong {
+            display: block;
+            position: relative;
+            top: 4px;
+            color: #fff;
+            z-index: 3;
+        }
+        
+        #gallery li a:hover .color {
+            visibility: visible;
+            height: 22px;
+        }
+        
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+        }
+        
+        #box {
+            clear: left;
+            border: 3px solid #229154;
+            background: rgb(254, 255, 203);
+            padding-left: 20px;
+            border-radius: 30px;
+            width: 345px;
+            height: 230px;
+            margin-left: 500px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>2021-03-04</h1>
+    <header>
+        <h2>C/S/S/ s/h/o/e/s - s/h/o/p</h2>
+    </header>
+    <nav>
+        <ul id="gallery">
+            <li>
+                <a href="#">
+                    <img src="image/bag_hotpink.png" alt="hotPink" />
+                    <span class="color">
+                        <strong>Hot Pink</strong>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="image/bag_navy.png" alt="Navy" />
+                    <span class="color">
+                        <strong>Navy</strong>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="image/bag_white.png" alt="white" />
+                    <span class="color">
+                        <strong>White</strong>
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <div id="box">
+            <p> &lt; 보였다 안보였다 하는 태그 종류 &gt; <br> display : block / none <br> (none은 처음부터 없던 것처럼 안보이게 함) <br> visibility : visible / hidden <br> opacity: 1 / 0 </p>
+
+            <p> &lt; z-index &gt; <br> position이 다층이 될 수 있게 하는 요소 <br> 최대값이 없고 마이너스 가능 / -1 이하는 의미 없음 <br> position 태그 사용했을 때에만 사용 가능 <br>
+        </div>
+
+    </nav>
+
+</body>
+
+</html>

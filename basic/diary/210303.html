@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021-03-03</title>
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+        
+        body {
+            background-color: rgb(250, 229, 209);
+        }
+        
+        h1 {
+            text-align: center;
+            text-shadow: 0px 0px 5px #666;
+            font-size: 3em;
+            letter-spacing: 5px;
+            color: #64fd71;
+        }
+        
+        details {
+            text-align: center;
+            font-size: 19px;
+            margin: 50px;
+            color: #ff4747;
+        }
+        
+        summary {
+            cursor: pointer;
+        }
+        
+        summary:hover {
+            background-color: #ff4747;
+            color: #fef4e9;
+        }
+        
+        body,
+        ul,
+        li,
+        dl,
+        dt,
+        dd {
+            margin: 0px;
+            padding: 0px;
+            font-family: "맑은 고딕", 돋움;
+        }
+        
+        #book1 {
+            width: 170px;
+            height: 45px;
+            background: red;
+            color: #fff;
+            overflow: hidden;
+            -moz-transition-property: width;
+            -moz-transition-duration: 2s;
+            -webkit-transition-property: width;
+            -webkit-transition-duration: 2s;
+            -o-transition-property: width;
+            -o-transition-duration: 2s;
+            transition-property: width;
+            transition-duration: 2s;
+        }
+        
+        #book1:hover {
+            width: 900px;
+        }
+        
+        #book2 {
+            width: 130px;
+            height: 45px;
+            background: yellow;
+            color: #fff;
+            overflow: hidden;
+            transition-property: width;
+            transition-duration: 5s;
+        }
+        
+        #book2:hover {
+            width: 1000px;
+        }
+        
+        #dre {
+            width: 200px;
+            height: 45px;
+            background: green;
+            color: #fff;
+            overflow: hidden;
+            transition-property: width;
+            transition-duration: 3s;
+        }
+        
+        #dre:hover {
+            width: 900px;
+        }
+        
+        #pre {
+            width: 200px;
+            height: 45px;
+            background: blue;
+            color: #fff;
+            overflow: hidden;
+            transition-property: width;
+            transition-duration: 3s;
+        }
+        
+        #pre:hover {
+            width: 900px;
+        }
+        
+        .myclass1,
+        .myclass2,
+        .myclass3,
+        .myclass4,
+        .myclass5,
+        .myclass6,
+        .myclass7,
+        .myclass8,
+        .myclass9 {
+            margin: 40px auto;
+            width: 200px;
+            height: 200px;
+            background: #bbb;
+            box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1) inset, 0px 0px 0px 2px rgba(0, 0, 0, 0.2) inset;
+            color: #fff;
+        }
+        
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background: #00000050;
+            transition: transform 1s ease;
+        }
+        
+        .myclass1:hover .box1 {
+            transform: translateX(60px);
+        }
+        
+        .myclass2:hover .box1 {
+            transform: translateY(-60px);
+        }
+        
+        .myclass3:hover .box1 {
+            transform: perspective(150px) translateZ(60px);
+        }
+        
+        .myclass4:hover .box1 {
+            transform: rotateX(45deg);
+        }
+        
+        .myclass5:hover .box1 {
+            transform: rotateY(-45deg);
+        }
+        
+        .myclass6:hover .box1 {
+            transform: rotateZ(45deg);
+        }
+        
+        .myclass7:hover .box1 {
+            transform: scaleX(2);
+        }
+        
+        .myclass8:hover .box1 {
+            transform: scaleY(2);
+        }
+        
+        .myclass9:hover .box1 {
+            transform: perspective(150px) scaleZ(2) translateZ(60px);
+        }
+        
+        #ball {
+            width: 100px;
+            height: 100px;
+            background: #ff00ff;
+            position: relative;
+            border-radius: 50px;
+            border: 2px solid #000;
+            -webkit-animation-name: myani;
+            -webkit-animation-duration: 3s;
+            -o-animation-name: myani;
+            -o-animation-duration: 3s;
+            -ms-animation-name: myani;
+            -ms-animation-duration: 3s;
+            -moz-animation-name: myani;
+            -moz-animation-duration: 3s;
+            animation-name: myani;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            /* 무한반복 */
+            animation-direction: alternate;
+            /* 애니메이션 끝난 후 반대방향 */
+        }
+        
+        @keyframes myani {
+            0% {
+                left: 10px;
+            }
+            100% {
+                left: 500px;
+            }
+        }
+        
+        #ball:hover {
+            animation-play-state: paused;
+        }
+        
+        p {
+            background: url(image/css_design.png) no-repeat;
+            font-size: 20px;
+            font-family: arial;
+            height: 400px;
+            text-align: center;
+            margin: 0px;
+            padding: 0px;
+        }
+        /* Layout */
+        
+        #box1 {
+            background: #f69;
+            height: 200px;
+            overflow: hidden;
+            width: 200px;
+            border: 1px solid #666;
+            float: left;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        
+        #box2 {
+            background: #fC9;
+            height: 200px;
+            overflow: auto;
+            width: 200px;
+            border: 1px solid #666;
+            float: left;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        
+        #box3 {
+            background: #3cf;
+            height: 200px;
+            overflow: scroll;
+            width: 200px;
+            border: 1px solid #666;
+            float: left;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        
+        #box4 {
+            background: #6c3;
+            height: 400px;
+            clip: rect(0px, 200px, 150px, 0px);
+            width: 200px;
+            border: 1px solid #666;
+            float: left;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        
+        #box4 h1 {
+            position: absolute;
+            clip: rect(0px, 200px, 150px, 0px);
+            /* top, right, bottom, left */
+            /* 포지션 속성이 absolute, fixed 일때만 적용 */
+        }
+        
+        #box5 {
+            background: #fC9;
+            height: 400px;
+            clip: rect(150px, 200px, 400px, 0px);
+            width: 200px;
+            border: 1px solid #666;
+            float: left;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        
+        #box5 h1 {
+            position: absolute;
+            clip: rect(150px, 200px, 400px, 0px);
+        }
+        
+        #css_design {
+            margin: 20px auto;
+            width: 1060px;
+        }
+        
+        #summaRy {
+            clear: left;
+        }
+        
+        #memberBox {
+            color: #606060;
+            border: 1px solid #b7b7b7;
+            background: #fff;
+            text-align: center;
+            background: linear-gradient(45deg, #fff, #ededed);
+            /* 그라디언트 모양 (각도, 시작색, 끝색) */
+            width: 400px;
+            padding: 20px;
+            margin: 50px auto;
+        }
+        
+        .btnOrange {
+            cursor: pointer;
+            text-align: center;
+            font-size: 1.5em;
+            padding: 0.5em 2em 0.55em;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+            border-radius: 0.8em;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            color: #fef4e9;
+            berder: 1px solid #da7c0c;
+            background: /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+45,ff5c5c+100;Red+3D+%231 */
+            background: #febbbb;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#febbbb', endColorstr='#ff5c5c', GradientType=0);
+            /* IE6-9 */
+        }
+        
+        .btnOrange:hover {
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff5c5c+0,fe9090+55,febbbb+100 */
+            background: #ff5c5c;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #ff5c5c 0%, #fe9090 55%, #febbbb 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #ff5c5c 0%, #fe9090 55%, #febbbb 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #ff5c5c 0%, #fe9090 55%, #febbbb 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ff5c5c', endColorstr='#febbbb', GradientType=0);
+            /* IE6-9 */
+        }
+        
+        nav {
+            boder: 1px solid #980c10;
+            background: /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#febbbb+0,fe9090+45,ff5c5c+100;Red+3D+%231 */
+            background: #febbbb;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
+            /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
+            /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, #febbbb 0%, #fe9090 45%, #ff5c5c 100%);
+            /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#febbbb', endColorstr='#ff5c5c', GradientType=0);
+            /* IE6-9 */
+        }
+        
+        #topNav {
+            list-style: none;
+            width: 800px;
+            height: 45px;
+            margin: 0 auto;
+            padding: 0px;
+        }
+        
+        #topNav>li {
+            float: left;
+            padding-top: 10px;
+        }
+        
+        #topNav>li>ul {
+            display: none;
+        }
+        
+        #topNav>li:hover ul {
+            display: block;
+        }
+        
+        #topNav li a {
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 5px #666;
+            padding: 5px 10px 10px 10px;
+            letter-spacing: -1px;
+            display: block;
+        }
+        
+        ul ul {
+            margin-top: 20px;
+        }
+        
+        #topNav li ul li {
+            list-style: none;
+        }
+        
+        #topNav li a:hover {
+            background: #6e6e6e;
+            background-linear-gradient(90deg, #888, #575757);
+        }
+        
+        #summaRy {
+            margin: 0 auto;
+            width: 1300px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>2021-03-03</h1>
+    <details>
+        <summary>transition속성으로 애니메이션 만들기</summary>
+        <div id="book1">
+            <dl>
+                <dt>포토샵 CS5</dt>
+                <dd>다년간의 포토샵 강의 노하우로 포토샵의 기본기를 한권으로 끝낸다!</dd>
+            </dl>
+        </div>
+        <div id="book2">
+            <dl>
+                <dt>일러스트레이터 CS5</dt>
+                <dd>캐릭터 디자인부터 고급 일러스트까지 만능 벡터 그래픽툴.</dd>
+            </dl>
+        </div>
+        <dl id="dre">
+            <dt>드림위버 CS5</dt>
+            <dd>풍부한 실습 문제를 통해 드림위버의 기본기를 확실하게 내것으로 만든다.</dd>
+        </dl>
+        <dl id="pre">
+            <dt>프리미어 CS5</dt>
+            <dd>컷 편집부터 출력까지 책임지는 원스톱 영상 편집 툴.</dd>
+        </dl>
+
+    </details>
+    <details>
+        <summary>transform 여러가지 속성</summary>
+        <div class="myclass1">
+            <div class="box1">translateX(60px)</div>
+        </div>
+        <div class="myclass2">
+            <div class="box1">translateY(60px)</div>
+        </div>
+        <div class="myclass3">
+            <div class="box1">perspective(150px) translateZ(60px)</div>
+        </div>
+        <div class="myclass4">
+            <div class="box1">rotateX(45deg)</div>
+        </div>
+        <div class="myclass5">
+            <div class="box1">rotateY(45deg)</div>
+        </div>
+        <div class="myclass6">
+            <div class="box1">rotateZ(45deg)</div>
+        </div>
+        <div class="myclass7">
+            <div class="box1">scaleX(2)</div>
+        </div>
+        <div class="myclass8">
+            <div class="box1">scaleY(2)</div>
+        </div>
+        <div class="myclass9">
+            <div class="box1">perspective(150px) scaleZ(2) translateZ(60px)</div>
+        </div>
+    </details>
+    <details>
+        <summary>keyframes속성으로 움직이는 공 만들기</summary>
+        <div id="ball"></div>
+    </details>
+    <details>
+        <summary>overflow, clip</summary>
+        <div id="css_design">
+            <div id="box1">
+                <p>overflow:hidden</p>
+            </div>
+            <div id="box2">
+                <p>overflow:auto</p>
+            </div>
+            <div id="box3">
+                <p>overflow:scroll</p>
+            </div>
+            <div id="box4">
+                <p>clip:rect(0px,200px,150px, 0px)</p>
+            </div>
+            <div id="box5">
+                <p>clip:rect(150px,200px,400px,0px)</p>
+            </div>
+        </div>
+    </details>
+    <details id="summaRy">
+        <summary>그라데이션 상자와 회원 가입 버튼 만들기</summary>
+        <div id="memberBox">
+            <h4>아직 infoPub 회원이 아니세요? </h4>
+            <button class="btnOrange">회원 가입 하기</button>
+        </div>
+    </details>
+    <details>
+        <summary>그라데이션 메뉴바 만들기</summary>
+        <nav>
+            <ul id="topNav">
+                <li><a href="">best 50</a>
+                    <ul>
+                        <li><a href="">a</a></li>
+                        <li><a href="">b</a></li>
+                        <li><a href="">c</a></li>
+                    </ul>
+                </li>
+                <li><a href="">high heel</a></li>
+                <li><a href="">casual</a></li>
+                <li><a href="">flat</a></li>
+                <li><a href="">boots</a></li>
+                <li><a href="">sandal</a></li>
+                <li><a href="">bag</a></li>
+                <li><a href="">acc</a></li>
+                <li><a href="">sale</a></li>
+            </ul>
+        </nav>
+    </details>
+
+</body>
+
+</html>

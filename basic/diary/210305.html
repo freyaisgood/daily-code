@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021-03-05</title>
+    <style>
+        body {
+            font: 0.95em Arial, sans-serif;
+            margin: 50px 0px;
+            background-color: cornsilk;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 70px;
+            color: rgb(25, 167, 167);
+        }
+        
+        h3 {
+            text-align: center;
+            font-size: 30px;
+            color: rgb(245, 119, 161);
+        }
+        
+        div nav {
+            width: 500px;
+            margin: 0px auto;
+        }
+        
+        div h2 {
+            text-shadow: 0px 0px 5px #666;
+            text-align: center;
+            font-size: 3em;
+            letter-spacing: 5px;
+            color: #d81b21;
+            text-transform: uppercase;
+        }
+        
+        div a {
+            text-decoration: none;
+        }
+        
+        div img {
+            border: none;
+        }
+        
+        div ul,
+        div li {
+            margin: 0px;
+            padding: 0px;
+        }
+        /* Rollover Design */
+        
+        #gallery {
+            list-style: none;
+        }
+        
+        #gallery li {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin-left: 15px;
+        }
+        
+        #gallery li a img {
+            width: 100px;
+            height: 100px;
+            display: block;
+            border: 2px solid #000;
+            position: relative;
+            z-index: 2;
+            transition-property: width, height;
+            transition-duration: 3s;
+            /* 1000분의 1초 */
+        }
+        
+        #gallery li:hover a img {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            z-index: 3;
+            box-shadow: 0 0 15px 2px #000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>2021-03-05</h1>
+    <div>
+        <h3>가로, 세로로 애니메이션되어 커지는 롤오버 이미지 만들기</h3>
+        <header>
+            <h2>C/S/S/ s/h/o/e/s - s/h/o/p</h1>
+        </header>
+        <nav>
+            <ul id="gallery">
+                <li>
+                    <a href=""><img src="image/bag_hotpink.png" alt="hotPink" /></a>
+                </li>
+                <li>
+                    <a href=""><img src="image/bag_navy.png" alt="Navy" /></a>
+                </li>
+                <li>
+                    <a href=""><img src="image/bag_white.png" alt="white" /></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+</body>
+
+</html>

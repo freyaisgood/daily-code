@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2021-03-10</title>
+
+    <style>
+        h1 {
+            text-align: center;
+            color: rgb(64, 247, 95);
+            border: 3px solid rgb(245, 243, 160);
+            border-radius: 30px;
+            width: 300px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        
+        h2 {
+            text-align: center;
+            color: rgb(65, 67, 236);
+        }
+        
+        #wrap {
+            width: 1200px;
+            height: 400px;
+            background: red;
+            margin: 50px auto;
+        }
+        
+        #left {
+            width: 800px;
+            height: 400px;
+            background: yellow;
+            float: left;
+        }
+        
+        #right {
+            width: 400px;
+            height: 400px;
+            background: #ffff99;
+            float: left;
+        }
+        
+        #top {
+            width: 800px;
+            height: 90px;
+            background: #26ff93;
+            border-bottom: 10px solid #fff;
+        }
+        
+        #bottom {
+            width: 800px;
+            height: 300px;
+            background: #00d9d9;
+        }
+        
+        .bottomLeft {
+            width: 600px;
+            height: 300px;
+            float: left;
+            background: #999999;
+        }
+        
+        .bottomRight {
+            width: 190px;
+            height: 300px;
+            float: left;
+            background: #ffbfdf;
+            border-left: 10px solid #fff;
+        }
+        
+        .bottomLeft>.leftTop {
+            width: 600px;
+            height: 90px;
+            background: #ffff4c;
+            border-bottom: 10px solid #fff;
+        }
+        
+        .bottomLeft>.leftBottom {
+            width: 600px;
+            height: 200px;
+            background: #ff9999;
+        }
+        
+        .leftLeft {
+            width: 190px;
+            height: 200px;
+            float: left;
+            background: #cfbfff;
+            border-right: 10px solid #fff;
+        }
+        
+        .leftCenter {
+            width: 190px;
+            height: 200px;
+            float: left;
+            background: #dfffbf;
+            border-right: 10px solid #fff;
+        }
+        
+        .leftRight {
+            width: 200px;
+            height: 200px;
+            float: left;
+            background: #73b9ff;
+        }
+        
+        .leftLeft>.leftTop {
+            width: 190px;
+            height: 95px;
+            background: #0086b3;
+            border-bottom: 10px solid #fff;
+        }
+        
+        .leftLeft>.leftBottom {
+            width: 190px;
+            height: 95px;
+            background: #ffc926;
+        }
+        
+        .rightTop {
+            width: 390px;
+            height: 290px;
+            background: #ff7373;
+            border-bottom: 10px solid #fff;
+            border-left: 10px solid #fff;
+        }
+        
+        .rightBottom {
+            width: 390px;
+            height: 100px;
+            background: #b399ff;
+            border-left: 10px solid #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>2021-03-10</h1>
+    <h2>div로 layout 만들기</h2>
+    <div id="wrap">
+        <div id="left">
+            <div id="top"></div>
+            <div id="bottom">
+                <div class="bottomLeft">
+                    <div class="leftTop"></div>
+                    <div class="letfBottom">
+                        <div class="leftLeft">
+                            <div class="leftTop"></div>
+                            <div class="leftBottom"></div>
+                        </div>
+                        <div class="leftCenter"></div>
+                        <div class="leftRight"></div>
+                    </div>
+                </div>
+                <div class="bottomRight"></div>
+            </div>
+        </div>
+        <div id="right">
+            <div class="rightTop"></div>
+            <div class="rightBottom"></div>
+        </div>
+    </div>
+</body>
+
+</html>

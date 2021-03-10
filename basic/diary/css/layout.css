@@ -1,0 +1,28 @@
+/* Screen Layout */
+
+body {
+    font-family: "맑은 고딕", sans-serif;
+    background: url(../image/stripe.png) repeat;
+}
+
+h1 {
+    background: url(../image/title_media.png) no-repeat center top;
+    height: 165px;
+}
+
+h1 span {
+    display: none;
+}
+
+#tableDesign {
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+#tableDesign td {
+    padding: 5px 20px;
+    font-size: 0.9em;
+    border: 1px solid #fff;
+    background: #000;
+    color: #fff;
+}

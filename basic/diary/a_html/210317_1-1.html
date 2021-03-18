@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>가로 원뎁스메뉴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            color: #404040;
+            font: 13px/normal "Malgin Gothic", "맑은 고딕", Dotum, "돋움", Verdana, Arial, "Trebuchet MS";
+            font-size-adjust: none;
+            font-stretch: normal;
+            background: url(../image/menu.png) no-repeat 50% 55%;
+            background-size: cover;
+        }
+        
+        #menu_bar ul {
+            list-style: none;
+            width: 100px;
+            float: right;
+        }
+        
+        #menu_bar ul:after {
+            content: '';
+            clear: both;
+            display: block;
+        }
+        /* 
+	자식이 float 되어 있을 경우 부모가 자식을 감싸지 못해 다음 요소가 영역을 침범하는 문제가 발생 
+	가장 많이 쓰이는 해결방법 : clear:fixed;
+	부모 요소에 가상의 띠를 만들어 영역을 선언
+ */
+        
+        #menu_bar a {
+            padding: 10px 10px 10px 15px;
+            margin-right: 1px;
+            margin-bottom: 1px;
+            background: #292929;
+            color: #888;
+            font: 12px Verdana;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            float: left;
+        }
+        
+        #menu_bar a:hover {
+            padding-left: 10px;
+            border-left: 5px solid #ff9900;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu_bar">
+        <ul>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+            <li><a href="#">menu6</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

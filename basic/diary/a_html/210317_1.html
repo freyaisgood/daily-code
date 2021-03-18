@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>가로 원뎁스메뉴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            color: #404040;
+            font: 13px/normal "Malgin Gothic", "맑은 고딕", Dotum, "돋움", Verdana, Arial, "Trebuchet MS";
+            font-size-adjust: none;
+            /* font-size-adjust : 소문자 기준으로 글씨크기 지정 */
+            font-stretch: normal;
+            /* font-stretch : 장평  */
+            background: url(../image/menu.png) no-repeat 50% 55%;
+            background-size: cover;
+            /* background-size : cover - 요소 가로 꽉채움 */
+            /* background-size : contain - 요소 세로 꽉채움 */
+            /* background-size : 10px 30px - 가로10px 세로30px */
+        }
+        
+        #menu_bar ul {
+            list-style: none;
+            width: 22%;
+            margin: auto;
+        }
+        
+        #menu_bar a {
+            padding: 10px 10px 15px 10px;
+            margin-right: 1px;
+            margin-bottom: 1px;
+            background: #292929;
+            color: #888;
+            font: 12px Verdana;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            float: left;
+        }
+        
+        #menu_bar a:hover {
+            padding-bottom: 10px;
+            border-bottom: 5px solid #ff9900;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu_bar">
+        <ul>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+            <li><a href="#">menu6</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

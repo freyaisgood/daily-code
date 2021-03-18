@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2021-03-16</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        img {
+            border: 0;
+        }
+        
+        html {
+            overflow-y: scroll;
+        }
+        
+        body {
+            font: 14px '맑은 고딕', sans-serif;
+        }
+        
+        .cf:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .fl {
+            float: left;
+        }
+        
+        #wrap {
+            width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        h2 {
+            background: url(image/table_bg.png) no-repeat left center;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 60px;
+            margin-top: 50px;
+        }
+        /* 게시판 검색창 */
+        
+        #search_wrap fieldset {
+            float: right;
+            margin-bottom: 10px;
+            border: 0;
+        }
+        
+        #search_wrap select,
+        #search_wrap input {
+            vertical-align: middle;
+            font-size: 14px;
+            margin-right: 2px;
+            display: block;
+            border: 1px solid #aaa;
+            float: left;
+        }
+        
+        #search_wrap select {
+            height: 24px;
+        }
+        
+        #search_wrap input {
+            height: 22px;
+            line-height: 22px;
+            width: 150px;
+        }
+        
+        #search_wrap button {
+            height: 24px;
+            width: 60px;
+            border: 0;
+            background: #ff9900;
+            color: #fff;
+        }
+        
+        #search_wrap button:hover {
+            cursor: pointer;
+            color: #333;
+        }
+        /* 게시판 목록 */
+        
+        #board>div {
+            border-bottom: 1px dotted #ff9900;
+        }
+        
+        #board>div:hover {
+            background: #ffffee;
+        }
+        
+        #board>div.first {
+            background: #ff9900;
+            border-radius: 10px 10px 0 0;
+            color: #fff;
+        }
+        
+        #board>div.first>div {
+            width: 100px;
+            line-height: 50px;
+            height: 50px;
+            text-align: center;
+            float: left;
+        }
+        
+        #board>div>div.left {
+            text-align: left;
+        }
+        
+        #board>div.first:hover {
+            background: #ff9900;
+        }
+        
+        #board>div input {
+            display: none;
+        }
+        
+        #board>div>div {
+            width: 100px;
+            line-height: 50px;
+            height: 50px;
+            text-align: center;
+            float: left;
+        }
+        /* 게시판 세부목록 */
+        
+        .title {
+            width: 490px !important;
+            text-align: justify;
+            margin-right: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .content_wrap {
+            height: auto !important;
+            width: 96% !important;
+            text-align: left !important;
+            padding: 2%;
+            display: none;
+        }
+        
+        .subject {
+            text-align: justify;
+            font-weight: bold;
+            font-size: 16px;
+            background: #ffefbf;
+            padding: 10px 20px;
+            line-height: 26px;
+        }
+        
+        .content {
+            text-align: center;
+            padding: 10px 20px;
+            background: #fff;
+            line-height: 24px;
+            border-bottom: 1px solid #ddd;
+        }
+        /* 페이지네이션, 페이징 */
+        
+        #page {
+            position: relative;
+            float: left;
+            left: 37%;
+            top: 50px;
+        }
+        
+        #page>div {
+            position: relative;
+            float: left;
+            left: -50px;
+            padding: 2px 10px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        
+        .prev,
+        .next {
+            text-indent: -9999999999px;
+        }
+        
+        .prev {
+            background: url(image/left.png) no-repeat;
+        }
+        
+        .next {
+            background: url(image/right.png) no-repeat;
+        }
+        /* 라디오버튼체크 */
+        
+        #board input:checked~div.content_wrap {
+            display: block;
+        }
+        
+        label {
+            cursor: pointer;
+        }
+        
+        #board input:checked~div.title>label {
+            cursor: default;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>2021-03-16</h1>
+        <h2>게시판</h2>
+        <div id="search_wrap" class="cf">
+            <form action="#">
+                <fieldset>
+                    <label>검색분류&nbsp;&nbsp;
+						<select name="search">
+							<option value="제목">제목</option>
+							<option value="날짜">날짜</option>
+							<option value="글쓴이">글쓴이</option>
+						</select>
+					</label>
+                    <label>검색단어&nbsp;&nbsp;<input type="text" name="text"/></label>
+                    <button type="submit">검색</button>
+                </fieldset>
+            </form>
+        </div>
+        <!-- //id="search_wrap" -->
+        <div id="board">
+            <div class="cf first">
+                <div><span>번호</span></div>
+                <div class="title"><span>제목</span></div>
+                <div><span>글쓴이</span></div>
+                <div><span>등록일</span></div>
+            </div>
+            <div class="cf">
+                <input type="radio" id="click10" name="click" />
+                <div>10</div>
+                <div class="title left">
+                    <label for="click10" class="cf">모든 국민은 법률이 정하는 바에 의하여 공무담임권을 가진다.</label>
+                </div>
+                <div>박희진</div>
+                <div>2021-03-16</div>
+                <div class="content_wrap">
+                    <div class="subject">
+                        모든 국민은 법률이 정하는 바에 의하여 공무담임권을 가진다.
+                    </div>
+                    <div class="content">
+                        광물 기타 중요한 지하자원·수산자원·수력과 경제상 이용할 수 있는 자연력은 법률이 정하는 바에 의하여 일정한 기간 그 채취·개발 또는 이용을 특허할 수 있다.
+                    </div>
+                </div>
+            </div>
+            <div class="cf">
+                <input type="radio" id="click9" name="click" />
+                <div>9</div>
+                <div class="title left">
+                    <label for="click9" class="cf">모든 국민은 법률이 정하는 바에 의하여 공무담임권을 가진다.</label>
+                </div>
+                <div>박희진</div>
+                <div>2021-03-16</div>
+                <div class="content_wrap">
+                    <div class="subject">
+                        모든 국민은 법률이 정하는 바에 의하여 공무담임권을 가진다.
+                    </div>
+                    <div class="content">
+                        광물 기타 중요한 지하자원·수산자원·수력과 경제상 이용할 수 있는 자연력은 법률이 정하는 바에 의하여 일정한 기간 그 채취·개발 또는 이용을 특허할 수 있다.
+                    </div>
+                </div>
+            </div>
+            <div class="cf">
+                <input type="radio" id="click8" name="click" />
+                <div>8</div>
+                <div class="title left">
+                    <label for="click8" class="cf">모든 국민은 법률이 정하는 바에 의하여 공무담임권을 가진다.</label>
+                </div>
+                <div>박희진</div>
+                <div>2021-03-16</div>
+                <div class="content_wrap">
+                    <div class="subject">
+                        모든 국민은 법률이 정하는 바에 의하여 공무담임권을 가진다.
+                    </div>
+                    <div class="content">
+                        광물 기타 중요한 지하자원·수산자원·수력과 경제상 이용할 수 있는 자연력은 법률이 정하는 바에 의하여 일정한 기간 그 채취·개발 또는 이용을 특허할 수 있다.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //id="board" -->
+        <div id="page" class="cf">
+            <div class="prev">이전</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div class="next">다음</div>
+        </div>
+    </div>
+
+</body>
+
+</html>

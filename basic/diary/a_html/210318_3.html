@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown_menu2</title>
+    <style>
+        html {
+            overflow: scroll;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        
+        body {
+            font-family: "맑은 고딕", "돋움", dotum, sans-serif;
+            font-size: .9em;
+            letter-spacing: -.1;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .fl {
+            float: left;
+        }
+        
+        .fr {
+            float: right;
+        }
+        
+        .cb {
+            clear: both;
+        }
+        
+        .cf:afer {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        
+        .cf {
+            *zoom: 1
+        }
+        /* *zoom - 익스7 가상선택자 안됨, clearfix 핵 */
+        
+        #header>#headerLnb {
+            position: relative;
+            margin-left: 500px;
+            margin-top: 50px;
+            width: 780px;
+            height: 40px;
+            /* background: royalblue; */
+        }
+        
+        #headerLnb>ul>li {
+            float: left;
+            font-weight: 600;
+            padding: 6px 3px;
+        }
+        
+        #headerLnb>ul>li>a {
+            display: block;
+            padding: 7px 10px;
+            margin: 0 20px;
+            color: #7eb9dd;
+            letter-spacing: -.1em;
+            text-shadow: 1px 1px 1px #ddd;
+        }
+        
+        #headerLnb>ul>li>a:hover {
+            color: #0059b3;
+        }
+        
+        #headerLnb>#nav>li:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 1px;
+            height: 20px;
+            background: #7eb9dd;
+            top: 15px;
+        }
+        
+        #headerLnb>#nav>li:first-child:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 0px;
+            height: 20px;
+            background: #7eb9dd;
+            top: 15px;
+        }
+        /* 2dep start */
+        
+        #headerLnb #nav li ul {
+            position: absolute;
+            line-height: 25px;
+            left: 20px;
+            top: 45px;
+            background: #7db9db;
+            margin: 0;
+            padding-bottom: 3px;
+            display: none;
+        }
+        
+        #headerLnb #nav li:hover ul {
+            display: block;
+        }
+        
+        #headerLnb #nav ul.menu1 {
+            left: 18px;
+        }
+        
+        #headerLnb #nav ul.menu2 {
+            left: 70px;
+        }
+        
+        #headerLnb #nav ul.menu3 {
+            left: 20px;
+        }
+        
+        #headerLnb #nav ul.menu4 {
+            left: 129px;
+        }
+        
+        #headerLnb #nav ul.menu5 {
+            left: 162px;
+        }
+        
+        #nav li ul li a {
+            float: left;
+            margin: 0;
+        }
+        
+        #nav li ul li {
+            float: left;
+        }
+        
+        #nav li ul li a {
+            display: block;
+            color: #f0eceb;
+            padding: 2px 10px;
+            text-align: center;
+        }
+        
+        #nav li ul li a:hover {
+            color: #3a75ad;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header" class="cf">
+        <div id="headerLnb" class="cf" title="메뉴바">
+            <ul id="nav" class="cf">
+                <li class="sub1">
+                    <a href="sub1.sub1.html">GW소개</a>
+                    <ul class="menu1">
+                        <li><a href="sub1.sub1.html">GW WED소개</a></li>
+                        <li><a href="sub1.sub1.html">인사말</a></li>
+                        <li><a href="sub1.sub1.html">주요행사</a></li>
+                        <li><a href="sub1.sub1.html">공지사항</a></li>
+                    </ul>
+                </li>
+                <li class="sub2">
+                    <a href="sub2/sub2.html">커뮤니티</a>
+                    <ul class="menu2">
+                        <li><a href="sub2/sub2.html">자유게시판</a></li>
+                        <li><a href="sub2/sub2.html">가입인사</a></li>
+                        <li><a href="sub2/sub2.html">정모후기</a></li>
+                        <li><a href="sub2/sub2.html">방명록</a></li>
+                    </ul>
+                </li>
+                <li class="sub3">
+                    <a href="sub3/sub3.html">갤러리</a>
+                    <ul class="menu3">
+                        <li><a href="sub3/sub3.html">GW갤러리</a></li>
+                        <li><a href="sub3/sub3.html">회원갤러리</a></li>
+                        <li><a href="sub3/sub3.html">자유갤러리</a></li>
+                        <li><a href="sub3/sub3.html">추천갤러리</a></li>
+                        <li><a href="sub3/sub3.html">작품갤러리</a></li>
+                        <li><a href="sub3/sub3.html">포토에세이</a></li>
+                    </ul>
+                </li>
+                <li class="sub4">
+                    <a href="sub4/sub4.html">정보마당</a>
+                    <ul class="menu4">
+                        <li><a href="sub4/sub4.html">질문과답변</a></li>
+                        <li><a href="sub4/sub4.html">일반자료실</a></li>
+                        <li><a href="sub4/sub4.html">이미지자료실</a></li>
+                        <li><a href="sub4/sub4.html">설문조사</a></li>
+                        <li><a href="sub4/sub4.html">추천도서</a></li>
+                        <li><a href="sub4/sub4.html">클럽웹진</a></li>
+                    </ul>
+                </li>
+                <li class="sub5">
+                    <a href="sub5/sub5.html">GW운영</a>
+                    <ul class="menu5">
+                        <li><a href="sub5/sub5.html">GW 일정표</a></li>
+                        <li><a href="sub5/sub5.html">GW 바란다</a></li>
+                        <li><a href="sub5/sub5.html">GW 현황</a></li>
+                        <li><a href="sub5/sub5.html">운영진게시판</a></li>
+                        <li><a href="sub5/sub5.html">운영진자료실</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
